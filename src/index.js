@@ -20,15 +20,14 @@ export default class App extends React.Component {
   render() {
     return (
       <div style={styles.root}>
-        <h1 style={styles.h1}>QRCode with JSON</h1>
+        <h1 style={styles.h1}>Restaurant Code</h1>
         <div style={styles.qrcode}>
           <QRCode
             level="Q"
             style={{ width: 256 }}
             value={JSON.stringify({
-              id: 928328,
-              name: 'Jane Doe',
-              insider: true,
+              id: 1,
+              name: 'Restaurant'
             })}
           />
         </div>
