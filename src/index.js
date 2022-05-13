@@ -2,6 +2,9 @@ import React from 'react';
 import { render } from 'react-dom';
 import { QRCode } from 'react-qr-svg';
 
+const access="1";
+var url="https://github.com/&access="
+
 const styles = {
   root: {
     fontFamily: 'sans-serif',
@@ -18,6 +21,8 @@ export default class App extends React.Component {
   componentDidMount() {}
 
   render() {
+    var md5 = require('md5');
+    url = url.concat(md5(access));
     return (
       <div style={styles.root}>
         <h1 style={styles.h1}>Restaurant Code</h1>
@@ -25,10 +30,7 @@ export default class App extends React.Component {
           <QRCode
             level="Q"
             style={{ width: 256 }}
-            value={JSON.stringify({
-              id: 1,
-              name: 'Restaurant'
-            })}
+            value={url}
           />
         </div>
       </div>
