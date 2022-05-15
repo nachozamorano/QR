@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { QRCode } from 'react-qr-svg';
 
 const access="1";
-var url="https://github.com/&access="
+var url="http://192.168.1.8:8100/menu/Restaurant&access="
 
 const styles = {
   root: {
@@ -22,7 +22,7 @@ export default class App extends React.Component {
 
   render() {
     var md5 = require('md5');
-    url = url.concat(md5(access));
+    url = url + md5(access);
     return (
       <div style={styles.root}>
         <h1 style={styles.h1}>Restaurant Code</h1>
