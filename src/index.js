@@ -1,9 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { QRCode } from 'react-qr-svg';
-
-const access="1";
-var url="https://friendfoods.herokuapp.com/menu/Restaurant&access="
+const access=1;
+var url="https://friendfoods.herokuapp.com/?access="
 
 const styles = {
   root: {
