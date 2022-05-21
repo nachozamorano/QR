@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { QRCode } from 'react-qr-svg';
 
 const access="1";
-var url="http://192.168.1.8:8100/menu/Restaurant&access="
+var url="https://friendfoods.herokuapp.com/menu/Restaurant&access="
 
 const styles = {
   root: {
